@@ -1,0 +1,278 @@
+/* custum css */
+.padding_0{
+	padding: 0px;
+}
+.flt_left{
+	float: left;
+}
+.flt_right{
+	float: right;
+}
+.border{
+	border: solid thin #DFDFDF;
+}
+.border_bottom{
+	border-bottom: solid 1px #0A83B2;
+}
+.bg_gray{
+	background-color: #EFF1F1;
+}
+.bg_white{
+	background-color: #fff;
+}
+.bg_img{
+	background-image: url("../img/img_footer.png") no-repeat!important;
+}
+.hight_100{
+	min-height: 100px;
+}
+.text_center{
+	text-align: center;
+}
+.margin_top{
+	margin-top: 10px;
+}
+.m_top{
+	margin-top: 20px;
+	border: none;
+}
+.m_left{
+	margin-left:10px;
+}
+.margin_bottom{
+	margin-bottom: 40px!important;
+}
+.margin_btm{
+	margin-bottom: 25px;
+}
+.middle_content_reg{
+	width:60%; 
+	margin:0 auto; 
+	height: 50px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.inner_content{
+	width: 60%;
+}
+.inner_content2{
+	width: 80%;
+}
+.inner_content3{
+	width: 40%;
+	padding: 10px;
+	/*box-shadow:0px 0px 5px 2px #eee;*/
+}
+.middle_content_reg3{
+	width:100%;
+	float:left;
+	background:#fff;
+	padding:10px 0px 10px 0px;
+	text-align:center;
+	height: auto; 
+}
+.middle_content_reg_txtarea{
+	width:60%; 
+	margin:0 auto; 
+	min-height: 100px;
+}
+.lbl{
+	text-align: left!important;
+}height: 50px;
+.lbl label{
+	line-height: 30px;
+	text-align: left;
+}
+.pding25{
+	padding: 20px;
+}
+.pdinglr{
+	padding-left: 20px;
+	padding-right: 20px;
+}
+.pdingtb{
+	padding-top: 0px;
+	min-height: 70px;
+	padding-bottom: 10px;
+}
+
+.right_contant input[type=text],input[type=tel],input[type=password],input[type=email],select{
+	width: 100%!important;
+	padding-left: 10px;
+	font-size: 16px;
+}
+.state_reg{
+	width:65%!important; 
+	float:left
+}
+.zip_reg{
+	width:30%!important; 
+	float:right
+}
+.select_reg{
+	width:100%!important;
+}
+textarea{
+	min-width: 100%;
+	max-width: 100%;
+	min-height: 80px;
+	max-height: 80px;
+	resize:none;
+	padding-left: 10px;
+	padding-top: 5px;
+	font-size: 16px;
+}
+.web_layout{
+	border:solid 1px #ccc; 
+	padding-top:5px; 
+	overflow-y: scroll; 
+	max-height:245px;
+}
+.agree_msg{
+	/*word-spacing:3px; */
+	font-size:16px;
+	line-height: 50px;
+}
+.agree_msg a:hover{
+	cursor:pointer;
+	text-decoration: none;
+}
+.verify img{
+	width: 100%;
+}
+.btn-Continue{
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 16px;
+	float: right;
+}
+
+@media(max-width: 767px){
+	.middle_content_reg{
+		width:100%;
+	}
+	.middle_content_regst{
+		width:100%;
+	}
+	.inner_content3{
+		width:80%;	
+	}
+	.middle_content_reg_txtarea{
+		width:100%;	
+	}
+	.middle_content_heading{
+		width: 100%;
+	}
+	.inner_content{
+		width: 100%;
+	}
+	.mrgin_top{
+		margin-top: 30px;
+	}
+	.lbl{
+		margin-top: 15px;
+		margin-bottom: -5px;
+	}
+	.verify img{
+		width: 100%;
+		max-height: 50px;
+	}	
+}
+@media(max-width: 991px){
+	.verify_text .right_contant{
+		width:100%;		
+	}
+}
+@media(max-width: 992px){
+	.prgrs{
+		margin-top: 20px;
+	}
+}
+@media(max-width: 1200px){
+	.prgrs2{
+		margin-top: 20px;
+	}
+}
+#jquery-tagbox-text_tagsinput{
+	width: auto; 
+	border:solid thin #ccc ; 
+	min-height: 73px; 
+	margin: 0px 0px 0px 216px; 
+	height:auto!important;	}
+	
+
+	
+	.verify {
+	width: 100%;
+	background:radial-gradient(#fff,#EC971F);
+	height: 40px;
+	text-align: center;
+	line-height: 40px;
+	font-size: 18px;
+	font-style: italic;
+	letter-spacing: 5px;
+}
+
+.red1{
+	 color: #ff0000;
+    margin-left: 335px !important;
+    margin-top: -20px;
+    position: absolute;
+}
+
+.response-msg {
+    
+	cursor: pointer;
+    float: right;
+    font-size: 14px;
+    font-weight: normal;
+    margin: 5px 0;
+    padding: 4px 0 5px;
+    position: fixed;
+    text-align: center;
+    top: 75px;
+    width: 100%;
+    z-index: 5;
+    background-color: #0f75bc;	
+
+}
+
+.registrationFormAlert{
+	color: red;
+	width: auto;
+	margin-top: -20px;
+   margin-left: 229px;
+   text-align: left;
+	
+	}
+	
+	.captcha_verification {
+    color: #ff0000;
+    margin-left: 401px;
+    margin-top: -20px;
+    text-align: left;
+    width: 20%;
+}
+.txt-color-blue{
+	color:#0f75bc;
+	}
+	
+	
+	.alert_verif{
+	display: none; 
+	position:absolute; 
+	left:79%; 
+	margin-top:-55px; 
+	z-index:10000;
+	}
+.EmailAlert{
+width: auto;
+color: red;	
+	}
+.error-message
+{
+	 float:left;
+  		width:100%;
+	 color: #B50007;
+	 font-size: 12px;
+} 
