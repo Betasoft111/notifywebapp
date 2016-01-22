@@ -8,14 +8,7 @@
     right: 0;
     width: 80%;
 }
-.right.linkedit > a {
-  color: #fff;
-}
-#profilepic {
-    height: 118px;
-    padding: 0 !important;
-    width: 200px;
-}
+
 .loadimg {
   background: none repeat scroll 0 0 rgba(0, 0, 0, 0.3);
   height: 100%;
@@ -46,7 +39,7 @@
 <img src="<?php echo HTTP_ROOT;?>/img/loading.gif"/>
 </div>
 <div class="main_content">
-<div class="row Heading">
+<div class="profile-outer-cont">
    <?php 
 //$vardd= base64_encode(1);
 //echo $vardd;
@@ -83,9 +76,14 @@ $sesdat=$this->Session->read('Auth');
 ?>
 <h1>My Account</h1>
 <div class="all_content">
-<div class="large-12 large-centered columns Profile_information">Profile information<span class="right linkedit"><a href="<?php echo HTTP_ROOT."users/signup/".base64_encode(@$parentData['User']['id']); ?>">Edit Profile</a></span></div>
+<div class="profile-cont"><span class="profile-text">Profile information</span><span class="right linkedit">
+
+  <a href="javascript:void(0)"><img src="../images/profile-edit.png"></a>
+
+<!-- <a href="<?php echo HTTP_ROOT."users/signup/".base64_encode(@$parentData['User']['id']); ?>"><img src="../images/profile-edit.png"></a> -->
+</span></div>
 <br/>
-<div class="large-6 small-12 columns">
+<div class="">
 <div class="profile_back">
 <div class="large-4 medium-4 small-12 columns Profile_img"><img id="profilepic" src="<?php if($parentData['User']['profile_pic']!=''){echo HTTP_ROOT.'bss_files/'.$parentData['User']['profile_pic'];}else{ echo HTTP_ROOT.'img/images/Profile-pic.png'; }?>">
 <div class="edit_image" style="display:none">
@@ -117,7 +115,7 @@ $sesdat=$this->Session->read('Auth');
               <?php } ?>
 </div>
 </div>
-<div class="large-6 small-12 columns">
+<div class="profile-bottom-cont">
   
   <table>
     <thead>

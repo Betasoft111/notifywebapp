@@ -22,6 +22,7 @@ class EmployeesController extends AppController {
  * @return void
  */
 	public function index() {
+		$this->layout = 'home_hc';
 		$this->Employee->recursive = 0;
 		$this->set('employees', $this->Paginator->paginate());
 	}
@@ -34,6 +35,7 @@ class EmployeesController extends AppController {
  * @return void
  */
 	public function view($id = null) {
+		$this->layout = 'home_hc';
 		if (!$this->Employee->exists($id)) {
 			throw new NotFoundException(__('Invalid employee'));
 		}
@@ -47,6 +49,7 @@ class EmployeesController extends AppController {
  * @return void
  */
 	public function add() {
+		$this->layout = 'home_hc';
 		if ($this->request->is('post')) {
 			$this->Employee->create();
 			if ($this->Employee->save($this->request->data)) {
@@ -66,6 +69,7 @@ class EmployeesController extends AppController {
  * @return void
  */
 	public function edit($id = null) {
+		$this->layout = 'home_hc';
 		if (!$this->Employee->exists($id)) {
 			throw new NotFoundException(__('Invalid employee'));
 		}

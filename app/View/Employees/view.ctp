@@ -1,3 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head>
+   
+    <title>Home Page</title>
+
+  </head>
+<style>
+table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td {
+  width: auto;
+}
+</style>
+  <body>
+      <div class="main_wrapper">
+ <?php echo $this->element('header');?>
+<!--end of header-->
+<section>
+  <div class="main-contents-details">
+  <div class="table">
 <div class="employees view">
 <h2><?php echo __('Employee'); ?></h2>
 	<dl>

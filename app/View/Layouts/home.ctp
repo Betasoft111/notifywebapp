@@ -16,8 +16,9 @@
 </style>
 
 
-<?php echo $this->Html->script(array('jquery.min','vendor/jquery','tinyslide','vendor/modernizr','foundation.min'))?>
-  <?php echo $this->Html->css(array('foundation','font-awesome','font-awesome.min','tinyslide','style','main'))?>
+<?php echo $this->Html->script(array('jquery.min','vendor/jquery','tinyslide','vendor/modernizr','foundation.min','main'))?>
+
+  <?php echo $this->Html->css(array('foundation','font-awesome','font-awesome.min','tinyslide','style','main','main1','icon'))?>
   <body id="sidebar-left">    	
 	  <div id="page_wrapper">
 		  <div id="page-header">

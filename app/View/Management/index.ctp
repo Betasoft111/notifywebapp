@@ -18,28 +18,25 @@
       <div class="options-cont">
           <div class="options-cont1">
               <span>
-                  <img src="images/option-img1.png" alt="" class="option-img">
-                  <img src="images/option-img01.png" alt="" class="option-img1">
+              	<div class="acounts-cont">                	
+                </div>
               </span>
-              <h3>Manage modules</h3>
-              <p>Create, modify or remove modules. Create module instances and much more.</p>
+              <h3>Accounts</h3>
+              <p>Manage the accounts.</p>
           </div>
-          <div class="options-cont1">
-              <span>
-                  <img src="images/option-img2.png" alt="" class="option-img">
-                  <img src="images/option-img02.png" alt="" class="option-img1">
+         
+
+          <a href="<?php echo HTTP_ROOT; ?>locations">
+
+            <div class="options-cont1">
+                <span>
+              	<div class="location-cont">                	
+                </div>
               </span>
-              <h3>View reports</h3>
-              <p>View detailed reports about your module usages.</p>
-          </div>
-          <div class="options-cont1">
-              <span>
-                  <img src="images/option-img3.png" alt="" class="option-img">
-                  <img src="images/option-img03.png" alt="" class="option-img1">
-              </span>
-              <h3>Mass messages</h3>
-              <p>Manage message targets and send messages for that targets just by one click.</p>
-          </div>
+                <h3>Locations</h3>
+                <p>Manage Locations.</p>
+            </div>
+          </a>
       </div>
   </div>
 </div>  

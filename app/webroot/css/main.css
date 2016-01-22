@@ -3,7 +3,8 @@
  header page css 
 
  *********************************/
- 
+
+
 .toolbarGlobal {
     background:url(images/bgTopGlobal.png) repeat-X;
     height:35px;
@@ -81,10 +82,7 @@
     width:100%;
     display:block;
 }
-.toolbarGlobal nav > ul > li {
- display: block;
-width: 100%;
-}
+
 
 
 }
@@ -150,7 +148,7 @@ lOGIN PAGE CSS
 body{
   margin:0;
   padding:0;
-  font-family: 'allerregular';
+  /*font-family: 'allerregular';*/
 }
 
 *{
@@ -183,11 +181,23 @@ body{
   display: inline-block;
   font-size: 16px;
   font-weight: normal;
+  margin: 0;
   padding: 15px 0 15px 4%;
-  width: 96%;
+  width: 100%;
 }
 
 .login-form p input {
+
+  margin: 0;
+  padding: 15px 0 15px 4%;
+  width: 100%;
+}
+
+/*.login-form p input {
+<<<<<<< HEAD
+>>>>>>> 98048b820fd3b83916a8bfff2c159952a3236884
+=======
+>>>>>>> 1980c1773559ef19d2c8afd1eb91e16235cfd226
   -moz-border-bottom-colors: none;
   -moz-border-left-colors: none;
   -moz-border-right-colors: none;
@@ -200,6 +210,28 @@ body{
   padding-bottom: 10px;
   width: 82%;
   font-family: 'allerregular';
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> 1980c1773559ef19d2c8afd1eb91e16235cfd226
+}*/
+
+.login-form .input {
+  border-color: -moz-use-text-color -moz-use-text-color #9e9e9e;
+  border-style: none none solid;
+  border-width: medium medium 1px;
+  float: left;
+  width: 82%;
+  margin-top: 25px;
+}
+
+.login-form .input input {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  box-shadow: 0 0;
+  margin-bottom: 0;
+
 }
 
 .login-form img {
@@ -207,7 +239,11 @@ body{
 }
 
 .login-form label {
+
   display: inline-block;
+
+  float: left;
+  margin-top: 25px;
   width: 15%;
 }
 
@@ -223,11 +259,23 @@ body{
   cursor: pointer;
   display: inline-block;
   font-size: 16px;
-  margin: 15px 29%;
+  margin: 15px 28%;
   padding: 8px 8%;
   text-decoration: none;
   text-transform: uppercase;
-  width: 25%;
+  width: 42%;
+}
+
+.login input[type="submit"] {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  border: medium none;
+  color: #ffffff;
+  font-size: 16px;
+  text-transform: uppercase;
+}
+
+.login .submit {
+  float: left;
 }
 
 .login-form a img {
@@ -309,6 +357,7 @@ body{
   font-size: 16px;
   padding: 0 17px;
   text-decoration: none;
+  font-family: arial;
 }
 
 .wrapper{
@@ -349,9 +398,11 @@ body{
   border-radius: 50%;
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.05), 0 2px 10px 0 rgba(0, 0, 0, 0.05);
   display: inline-block;
-  height: 180px;
-  padding: 70px 0 0;
-  width: 274px;
+  height: 260px;
+  line-height: 183px;
+  padding: 65px 68px;
+  width: 260px;
+  
 }
 
 .options-cont1 h3 {
@@ -364,13 +415,14 @@ body{
 .options-cont1 p {
   color: #757575;
   font-size: 16px;
-  padding: 0 25px 30px;
+  /*padding: 0 25px 30px;*/
 }
 
 .options-cont1 span:hover{
   box-shadow:0 16px 28px 0 rgba(0, 0, 0, 0.22), 0 25px 55px 0 rgba(0, 0, 0, 0.21);
   cursor:pointer;
 }
+
 
 /*.options-cont1 span:hover .option-img {
   display: block;
@@ -381,6 +433,45 @@ body{
   display:none;
 }*/
 
+
+::-moz-placeholder { /* Firefox 19+ */
+  color: #7b7b7b;
+  opacity: 1;
+}
+
+::-webkit-input-placeholder { /* Chrome */
+  color: #7b7b7b;
+}
+
+.login-form .active{
+	background-color:#fff;
+	color:#1e88e5!important;
+}
+
+.login-form button {
+  margin: 0 28%;
+  width: 45%;
+}
+
+.bread-crumb .active {
+    background: transparent none repeat scroll 0 0;
+    color: #ee6e73 !important;
+}
+
+#content .top-right a {
+  color: #ffffff;
+}
+
+.top-right img {
+  background: #ffffff none repeat scroll 0 0;
+  border-radius: 50px !important;
+  float: left;
+  height: 40px !important;
+  padding: 5px 9px;
+  width: 45px !important;
+}
+
+
 @media screen and (max-width:1099px){
   
 .wrapper {
@@ -388,6 +479,8 @@ body{
 }
 
 }
+
+
 
 @media screen and (max-width:479px){
   
@@ -397,11 +490,209 @@ body{
 
 .login-form .login {
   padding: 8px 8%;
-  width: 31%;
+  width: 45%;
+
 }
 
 .options-cont1 {
   width: 300px;
 }
 
+
+.login-form button {
+  margin: 0 25%;
+  width: 50%;
+}
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+.table {
+    float: left;
+    width: 100%;
+    background: #fcfcfc; 
+}
+form#LocationAddForm , form#LocationChecklistAddchecklistForm , form#LocationChecklistChecklistupdateForm , form#LocationEditForm , form#LocationupdateForm {
+    margin: auto;
+    width: 660px;
+    background-color: #fff;
+    border-radius: 2px;
+    margin: 0.5rem 0 1rem;
+    transition: box-shadow 0.25s ease 0s;
+    margin: auto;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+
+form#LocationAddForm fieldset, form#LocationChecklistAddchecklistForm fieldset , form#LocationChecklistChecklistupdateForm fieldset, form#LocationEditForm fieldset , form#LocationupdateForm fieldset {
+  border: none;
+  position: relative;
+}
+form#LocationAddForm div.text.input  , form#LocationChecklistAddchecklistForm div.text.input , form#LocationChecklistChecklistupdateForm div.text.input  , .form, form#LocationEditForm div.text.input{
+    position: relative;
+}
+.table form#LocationAddForm label.lable_item , .table form#LocationChecklistAddchecklistForm label.lable_item , .table form#LocationChecklistChecklistupdateForm label.lable_item , .table form#LocationEditForm label.lable_item{
+  position: absolute;
+  top: 15px;
+  color: #9e9e9e !important;
+   font-family: 'PT Sans';
+   text-transform: capitalize;
+}
+.table form#LocationAddForm label , .table form#LocationChecklistAddchecklistForm label , .table form#LocationChecklistChecklistupdateForm label , .table form#LocationEditForm label{
+    color: #9e9e9e !important;
+    font-family: "PT Sans";
+    margin-bottom: 10px;
+    text-transform: capitalize;
+
+}
+.table form#LocationAddForm a , .table form#LocationChecklistAddchecklistForm a , .table form#LocationChecklistChecklistupdateForm a , .table form#LocationEditForm a{
+
+  font-family: "PT Sans";
+}
+.table form#LocationAddForm label.lable_item.active ,  .table form#LocationChecklistAddchecklistForm label.lable_item.active ,  .table form#LocationChecklistChecklistupdateForm label.lable_item.active , .table form#LocationEditForm label.lable_item.active{
+   font-size: 0.8rem;
+    transform: translateY(-140%);
+    background: transparent;
+color: #068EC1 !important;
+}
+.table form#LocationAddForm .input.time select , .table form#LocationChecklistAddchecklistForm .input.time select , .table form#LocationChecklistChecklistupdateForm .input.time select , .table form#LocationEditForm .input.time select {
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 26%;
+}
+.table form#LocationAddForm .input.time label , .table form#LocationChecklistAddchecklistForm .input.time label , .table form#LocationChecklistChecklistupdateForm .input.time label , .table form#LocationEditForm .input.time label{
+    float: left;
+    margin-top: 6px;
+}
+.table form#LocationAddForm .input.time select , .table form#LocationChecklistAddchecklistForm .input.time select , .table form#LocationChecklistChecklistupdateForm .input.time select , .table form#LocationEditForm .input.time select{
+    margin-left: 2%;
+    margin-right: 1%;
+    width: 26%;
+}
+
+.table input[type="text"] {
+    border-left: 0 none;
+    border-right: 0 none;
+    border-top: 0 none;
+    box-shadow: none;
+}
+.table input:focus {
+  background: transparent;
+}
+
+.table input[type="date"], .table input[type="datetime-local"], .table input[type="email"], .table input[type="number"], .table input[type="password"], .table input[type="search"], .table input[type="tel"], .table input[type="text"], .table input[type="time"], .table input[type="url"], .table textarea.materialize-textarea {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: transparent;
+    border-color: -moz-use-text-color -moz-use-text-color #9e9e9e;
+    border-image: none;
+    border-radius: 0;
+    border-style: none none solid;
+    border-width: medium medium 1px;
+    box-shadow: none;
+    box-sizing: content-box;
+    font-size: 1rem;
+    height: 3rem;
+    margin: 0 0 15px;
+    outline: 0 none;
+    padding: 0;
+    transition: all 0.3s ease 0s;
+    width: 100%;
+}
+#LocationAddForm select, #LocationChecklistAddchecklistForm select , #LocationChecklistChecklistupdateForm select, #LocationEditForm select {
+    font-family: open sans;
+}
+.table input[type="text"] + label::after, .table input[type="date"] + label::after, .table input[type="datetime-local"] + label::after, .table input[type="email"] + label::after, .table input[type="number"] + label::after, .table input[type="password"] + label::after, .table input[type="search"] + label::after, .table input[type="tel"] + label::after,.table input[type="text"] + label::after, .table input[type="time"] + label::after, .table input[type="url"] + label::after, .table textarea.materialize-textarea + label::after {
+    content: "";
+    display: block;
+    opacity: 0;
+    position: absolute;
+    top: 65px;
+    transition: opacity 0.2s ease-out 0s, color 0.2s ease-out 0s;
+}
+.table .input-field label {
+    color: #9e9e9e;
+    cursor: text;
+    font-size: 1rem;
+    left: 0.75rem;
+    position: absolute;
+    top: 0.8rem;
+    transition: all 0.2s ease-out 0s;
+}
+.table .input-field label.active {
+    font-size: 0.8rem;
+    transform: translateY(-140%);
+}
+
+#LocationAddForm .form .submit input , #LocationChecklistAddchecklistForm .form .submit input  , #LocationChecklistChecklistupdateForm .form .submit input , #LocationEditForm .form .submit input {
+    background: #068ec1;
+    border: medium none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    float: right;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 6px 15px;
+    margin-right: 10px;
+}
+.main-contents-details a.butttt {
+    background: #068ec1;
+    border: medium none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    float: left;
+    font-size: 16px;
+    letter-spacing: 2px;
+    padding: 6px 15px;
+    margin-right: 10px;
+    margin-top: 30px;
+    margin-bottom: 20px;
+}
+#LocationAddForm .form a, #LocationChecklistAddchecklistForm .form a , #LocationChecklistChecklistupdateForm .form a, #LocationEditForm .form a, #LocationupdateForm .form a, #LocationChecklistChecklistForm .form a, 
+#LocationChecklistChecklistForm .submit input  {
+    background: #068ec1;
+    border: medium none;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    color: #fff;
+    float: right;
+    font-size: 15px;
+    letter-spacing: 2px;
+    padding: 6px 15px;
+}
+.form.buttonss {
+    float: right;
+    text-align: right;
+    width: 100%;
+}
+#LocationupdateForm p, #LocationChecklistChecklistForm p {
+    width: 100%;
+     font-family: "PT Sans";
+}
+#LocationupdateForm span, #LocationChecklistChecklistForm  span{
+    text-transform: capitalize;
+}
+#LocationupdateForm p label, #LocationChecklistChecklistForm p label {
+    float: left;
+    width: 30%;
+}
+.main-contents-details {
+    float: none;
+    margin: auto;
+    max-width: 1000px;
+}
+.main-contents-details table.details-table {
+    width: 100%;
+    margin-top: 20px;
 }

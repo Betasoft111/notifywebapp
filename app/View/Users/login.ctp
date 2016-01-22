@@ -39,13 +39,33 @@
 <section class="login-cont">
   <?php echo $this->Form->create('User'); ?>
   <div class="login-top-cont"><img src="<?php echo HTTP_ROOT;?>/images/notify-img.png" alt=""></div>
-    <h2><img src="<?php echo HTTP_ROOT;?>/images/tick-mark.png" alt=""><?php echo $msg = $this->element('header');?> Successfully logged out</h2>
-    <div class="login-form">
-      <p><label><img src="<?php echo HTTP_ROOT;?>/images/mail-icon.png" alt=""></label>
-       <?php echo $this->Form->input('email',array('label'=>false)); ?>
-        <p><label><img src="<?php echo HTTP_ROOT;?>/images/password-icon.png" alt="">
-        </label>  <?php echo $this->Form->input('password',array('label'=>false)); ?></p>
-        <a href="#" class="login"><?php echo $this->Form->end(array('label'=>'Login')); ?><img src="<?php echo HTTP_ROOT;?>/images/login-icon.png" alt=""></a>
+
+    <?php /*?><h2><img src="<?php echo HTTP_ROOT;?>/images/tick-mark.png" alt=""><?php echo $msg = $this->element('header');?> Successfully logged out</h2><?php */?>
+    <div class="error-message"><?php echo $msg = $this->element('header');?></div>
+    <div class="login-form">     
+       
+           
+       <div class="input-field">
+          <i class="material-icons prefix">email</i>
+          
+          <input type="email" id="input_20" class="validate" name="data[User][email]" required="">
+          <label class="">Email</label>
+        </div>
+        
+        <div class="input-field ">
+  			<i class="material-icons prefix">lock</i>
+            
+            <input type="password" required="" name="data[User][password]" class="validate" id="input_21">
+            <label for="input_21" class="">Password</label>
+        </div>
+        
+        <button class="btn waves-effect waves-light green darken-3" type="submit">
+  			<span>Log in</span><span></span>
+  			<i class="material-icons right">verified_user</i>
+		</button>
+        
+       
+
         <p><img src="<?php echo HTTP_ROOT;?>/images/key-icon.png" alt="" class="key-icon"><a href="#" class="forget" data-reveal-id="forgote123">Forgot your password?</a></p>    
     </div>    
 </section>

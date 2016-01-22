@@ -24,7 +24,10 @@ a{
 .main_navigation ul{list-style: none; margin: 0; padding: 0;}
 .main_navigation ul li a{ float: left;padding: 0px 20px;font-family: 'PT Sans', sans-serif; color: #fff; font-weight: 700; font-size: 16px; line-height: 49px;}
 .main_navigation ul li a:hover{background-color: #026a91;}
-.active{background-color: #026a91; color: #fff !important;}
+
+
+
+
 .toggle_button{display: none; width: 30px; height: 38px; cursor: pointer; margin-left: 15px;}
 .slider_bottom{float: left; width: 100%; background: #a3c3a7; height: 39px;}
 .main_content h1{font-family: 'Candara'; font-weight: bold; font-size: 31px; color: #3d3d3d;}
@@ -71,15 +74,15 @@ a{
 /*=========my-account-district-school page css==============*/
 table thead{background: #068EC1 !important;}
 table thead tr th, table thead tr td { color: #fff !important;}
-table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td{ width: 100%; font-weight: bold;     border: 1px solid #000;}
-.main_table{width: 100%; border: solid 1px #080808; overflow-y: hidden;}
+/*table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td{ width: 100%; font-weight: bold;     border: 1px solid #000;}*/
+/*.main_table{width: 100%; border: solid 1px #080808; overflow-y: hidden;}*/
 table tr.even, table tr.alt, table tr:nth-of-type(even) { background: #c6f0ff;}
 .checkbox{width: 50px; text-align: center;}
 .body_name, .school_name, .Actions { width: 100%;}
 .checkbox input[type="checkbox"]{margin: 0 !important;}
 .actions{width: 130px; display: block;}
 .actions2{width: 200px; display: block;}
-.actions span a, .actions2 span a{color: #000; font-weight: bold;}
+.actions span a, .actions2 span a{color: #000;}
 
 
 /*=========school page css==============*/
@@ -127,32 +130,18 @@ address{font-size: 13px; font-style: normal; color: #8c8c8c;}
 .bottom_services{margin: 0; padding: 0; margin-top: 20px;}
 .bottom_services li{list-style: none; margin: 0; padding: 0; font-weight: bold; color: #5a5a5a;
 line-height: 32px;}
-/*==============flash message css=========*/
-  div#flashMessage {
-width: 100%;
-float: left;
-text-align: center;
-margin: 10px 0px;
-color: red;
-overflow: hidden;
-background: #BAEBFD;
-padding: 5px 0;
-position: absolute;
-top: 124px;
-}
+
 /*==============Auth Flash message css=========*/
-  div#authMessage {
-width: 100%;
-float: left;
-text-align: center;
-margin: 10px 0px;
-color: red;
-overflow: hidden;
-background: #BAEBFD;
-padding: 5px 0;
-position: absolute;
-top: 124px;
+div#flashMessage, div#authMessage {
+  background: #ff0000 none repeat scroll 0 0;
+  color: #ffffff;
+  float: left;
+  overflow: hidden;
+  padding: 5px 0;
+  text-align: center;
+  width: 100%;
 }
+
 
   .next, .prev, .first > a {
     margin: 5px;
@@ -176,6 +165,410 @@ color:red;
 .beacons_user_services{margin: 0; padding: 0; margin-top: 20px;}
 .beacons_user_services li{color: #5a5a5a; font-size: 13px; margin-left:12px; }
 
+.outer-cont, #LocationChecklistChecklistForm, .profile-outer-cont{
+  background-color: #ffffff;
+  border-radius: 2px;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  margin: 0 auto;
+  overflow: hidden;
+  transition: box-shadow 0.25s ease 0s;
+  width: 660px;
+}
+
+.main_content .profile-outer-cont{
+	width: 500px;	
+}
+
+.profile-text {
+  display: inline-block;
+  padding-top: 12px;
+}
+
+.outer-cont .all_content {
+  border: medium none;
+  padding: 1.25rem;
+}
+
+.outer-cont .all_content h6 {
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.employees #EmployeeAddForm .input label {
+  color: #9e9e9e !important;
+  font-family: "PT Sans";
+  position: absolute;
+  text-transform: capitalize;
+  top: 15px;
+}
+
+.employees #EmployeeAddForm .input{
+	position:relative;
+}
+
+.employees #EmployeeAddForm .input.file label{
+    position: inherit;
+    top: 0;
+}
+
+.employees #EmployeeAddForm .input label.active {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #1e88e5 !important;
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+
+.outer-cont .submit input, #EmployeeEmplyeeupdateForm a {
+  background: #068ec1 none repeat scroll 0 0;
+  border: medium none;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  color: #ffffff;
+  float: right;
+  font-size: 16px;
+  letter-spacing: 2px;
+  margin-right: 0;
+  padding: 2px 15px;
+  width: 100%;
+}
+
+#EmployeeEmplyeeupdateForm a {
+  margin-right: 15px;
+   padding: 1px 15px;
+}
+
+.bread-crumb ul {
+  margin: 0;
+}
+
+#UserSignupForm .input label.active {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #068ec1 !important;
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+
+#UserSignupForm .input label {
+  color: #9e9e9e !important;
+  font-family: "PT Sans";
+  position: absolute;
+  text-transform: capitalize;
+  top: 15px;
+}
+
+#UserSignupForm .input{
+	position:relative;
+}
+
+.login-cont .all_content {
+  border: medium none;
+  padding: 0;
+}
+
+.login-cont .main_content {
+  float: left;
+  margin: 0;
+}
+
+.login-cont #UserSignupForm {
+  margin-top: 15px;
+  padding: 0 10px 30px;
+}
+
+.outer-cont h1 {
+  background: #cccccc none repeat scroll 0 0;
+  color: #000000;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px;
+}
+
+.main_table {
+  width: 100%;
+}
+
+.employlist-cont th a {
+  color: #ffffff;
+}
+
+.employlist-cont {
+  margin: 0 auto;
+  width: 1000px;
+}
+
+#LocationChecklistChecklistForm .input label.active, #EmployeeAddemployeeForm .input label.active{
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #068ec1 !important;
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+
+#LocationChecklistChecklistForm .input label, #EmployeeAddemployeeForm .input label{
+  color: #9e9e9e !important;
+  font-family: "PT Sans";
+  position: absolute;
+  text-transform: capitalize;
+  top: 15px;
+}
+
+#LocationChecklistChecklistForm .input, #EmployeeAddemployeeForm .input{
+	position:relative;
+}
+
+#EmployeeAddemployeeForm .input.file label, #LocationChecklistChecklistForm .input.date label{
+	position: inherit;
+    top: 0;
+}
+
+#LocationChecklistChecklistForm fieldset {
+  border: medium none;
+  margin: 0;
+}
+
+#LocationChecklistChecklistForm .input.date.required select, #LocationChecklistAddchecklistForm .input.date.required select, #LocationChecklistChecklistupdateForm .input.date.required select{
+  margin: 0 8px 12px;
+  width: 31%;
+}
+
+#LocationChecklistChecklistForm .input.date.required select:nth-child(2), #LocationChecklistAddchecklistForm .input.date.required select:nth-child(2), #LocationChecklistChecklistupdateForm .input.date.required select:nth-child(2){
+  margin-left: 0;
+}
+
+#LocationChecklistChecklistForm .input.date.required select:nth-child(4), #LocationChecklistAddchecklistForm .input.date.required select:nth-child(4), #LocationChecklistChecklistupdateForm .input.date.required select:nth-child(4){
+  margin-right: 0;
+}
+
+.main_wrapper #LocationChecklistChecklistForm .submit input {
+  padding: 7px 15px;
+  margin-right:10px;
+}
+
+.checklist-cont{
+	margin-top:20px;
+	float:left;
+	width:100%;
+}
+
+.options-cont a {
+  float: left;
+  min-height: 450px;
+}
+
+.options-cont1 span:hover .acounts-cont, .options-cont1 span:hover .location-cont, .options-cont1 span:hover .locationadd-cont, .options-cont1 span:hover .locationview-cont, .options-cont1 span:hover .manager-cont, .options-cont1 span:hover .employee-cont, .options-cont1 span:hover .notification-cont, .options-cont1 span:hover .scheduling-cont, .options-cont1 span:hover .checklist1-cont, .options-cont1 span:hover .edit-loc-cont,  .options-cont1 span:hover .reports-cont, .options-cont1 span:hover .add-employee-cont, .options-cont1 span:hover .delete-cont, .options-cont1 span:hover .employee-loc-cont{
+	background-position: 0 103%;
+}
+
+.acounts-cont{
+  background: rgba(0, 0, 0, 0) url("../images/icons/account-icon.png") no-repeat scroll 0 0;
+  height: 132px;
+  width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;
+}
+
+.location-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/location-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+  width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;
+}
+
+.locationadd-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/add-loc.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;
+}
+
+.locationview-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/view-loc.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;
+}
+
+.manager-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/manager-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.employee-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/employee-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.notification-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/notification-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.scheduling-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/scheduling-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.checklist1-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/checklist-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.edit-loc-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/edit-loc-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.reports-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/reports-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;	
+}
+
+.add-employee-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/add-employee.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;		
+}
+
+.delete-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/delete-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;		
+}
+
+.employee-loc-cont{
+	background: rgba(0, 0, 0, 0) url("../images/icons/employee-loc-icon.png") no-repeat scroll 0 0;
+	height: 132px;
+   width: 128px;
+  -webkit-transition: background 0.7s ease-in-out;
+    -moz-transition: background 0.7s ease-in-out;
+    transition: background 0.7s ease-in-out;		
+}
+
+.outer-cont .employees.form .submit input, .outer-cont .employees.form a{
+  line-height: 30px;
+  padding: 0 15px;
+  width: auto !important;
+}
+
+.profile-outer-cont h1 {
+  background: #464646 none repeat scroll 0 0;
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: normal;
+  margin: 0;
+  padding: 10px 0 10px 15px;
+}
+
+.profile-outer-cont .all_content {
+  border: medium none;
+  padding: 15px 20px 20px;
+}
+
+#profilepic {
+  margin-left: 8px;
+}
+
+.profile_back .editprofile {
+  font-size: 14px;
+  padding-left: 10px;
+}
+
+.profile-bottom-cont table {
+  border: 1px solid #cccccc;
+  float: left;
+  width: 270px;
+}
+
+.profile-bottom-cont th {
+  text-align: center;
+  width: 50%;
+}
+
+.profile-bottom-cont td {
+  text-align: center;
+}
+
+.profile-bottom-cont input {
+  border: medium none;
+}
+
+#EmployeeEmplyeeupdateForm .input label.active {
+  background: rgba(0, 0, 0, 0) none repeat scroll 0 0;
+  color: #068ec1 !important;
+  font-size: 0.8rem;
+  transform: translateY(-140%);
+}
+
+#EmployeeEmplyeeupdateForm .input label {
+  color: #9e9e9e !important;
+  font-family: "PT Sans";
+  position: absolute;
+  text-transform: capitalize;
+  top: 15px;
+}
+
+#EmployeeEmplyeeupdateForm .input{
+	position:relative;
+}
+
+#EmployeeEmplyeeupdateForm .input.file label {
+	position:inherit;
+	top:0px;	
+}
+
+#EmployeeEmplyeeupdateForm .input.file{
+	clear:both;
+}
+
+.employee-image-cont {
+  float: left;
+  width: 200px;
+}
+
+.main_content .employee-image-cont img {
+  margin: 0 !important;
+}
+
 @media screen and (max-width: 667px){
 	.shadow{display: none;}
 .main_table{overflow-y: hidden;}
@@ -188,7 +581,44 @@ color:red;
 	.toggle_button{display: block;}
 	.main_navigation {display: none;}
 	.main_navigation ul li a{display: block; float: none; text-align: center; line-height: 38px; border-bottom: 1px solid #005f82;}
+	
+	.toggle_button {
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 140px;
 }
+
+.toolbarGlobal nav > ul > li {
+ display: block;
+width: 100%;
+}
+
+.main_wrapper form#LocationAddForm, .main_wrapper form#LocationChecklistAddchecklistForm, .main_wrapper form#LocationEditForm, .main_wrapper form#LocationChecklistEditchecklistForm, .main_wrapper form#LocationupdateForm,  .main_wrapper form#LocationChecklistUpdatechecklistForm {
+  width: 96%;
+}
+
+.main_wrapper .table form#LocationAddForm .input.time select, .main_wrapper .table form#LocationChecklistAddchecklistForm .input.time select, .main_wrapper .table form#LocationEditForm .input.time select, .main_wrapper .table form#LocationChecklistEditchecklistForm .input.time select {
+  margin-left: 10px;
+  width: 24%;
+}
+
+.outer-cont {
+  width: 100%;
+}
+
+
+
+}
+
+@media screen and (max-width: 479px){
+	
+.main_wrapper .table form#LocationAddForm .input.time select, .main_wrapper .table form#LocationChecklistAddchecklistForm .input.time select, .main_wrapper .table form#LocationEditForm .input.time select {
+  width: 19%;
+}
+
+}
+
 @media screen and (max-width: 320px){
 .actions, .actions2{width: 100%; line-height: 1;}
 table thead tr th, table tfoot tr th, table tfoot tr td, table tbody tr th, table tbody tr td, table tr td{    font-size: 10px; line-height: 0;}

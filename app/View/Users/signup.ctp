@@ -1,30 +1,26 @@
-      <div class="main_wrapper">
+ <div class="main_wrapper">
      <?php echo $this->element('header');?>
 <!--end of header-->
 <section class="login-cont">
   <div class="login-top-cont"><img src="<?php echo HTTP_ROOT;?>/images/notify-img.png" alt=""></div>
 <div class="main_content">
 <div class="row Heading">
-<div class="all_content">
-<h2>User Details</h2>
-<br/>
-<div >
+
 <?php echo $this->Form->create('User'); ?>
-<label>First Name</label>
+
 <?php echo $this->Form->input('id',array('label'=>false, 'type'=>'hidden','value'=>@$userdatass['User']['id'])); ?>
-<?php echo $this->Form->input('first_name',array('label'=>false, 'placeholder'=>'First Name','value'=>@$userdatass['User']['first_name'])); ?>
-<label>Last Name</label>
-<?php echo $this->Form->input('last_name',array('label'=>false, 'placeholder'=>'Last Name','value'=>@$userdatass['User']['last_name'])); ?>
-<label>Email<span class="star">*</span></label>
-<?php echo $this->Form->input('email',array('label'=>false, 'placeholder'=>'Email','value'=>@$userdatass['User']['email'])); ?>
+<?php echo $this->Form->input('first_name',array( 'value'=>@$userdatass['User']['first_name'])); ?>
 
-<label>Password<span class="star">*</span><a class="hideshow right" href="javascript:void(0);">Show Password</a></label>
+<?php echo $this->Form->input('last_name',array('value'=>@$userdatass['User']['last_name'])); ?>
 
-<?php echo $this->Form->input('password',array('label'=>false, 'placeholder'=>'Password','value'=>@$userdatass['User']['password_dummy'])); ?>
+<?php echo $this->Form->input('email',array('value'=>@$userdatass['User']['email'])); ?>
+
+<?php echo $this->Form->input('password',array( 'value'=>@$userdatass['User']['password_dummy'])); ?>
 <?php echo $this->Form->input('re_password', array('type'=>'password', 'label'=>'Confirm Password', 'value'=>'', 'autocomplete'=>'off'));?>
-<label>Organization Name<span class="star">*</span></label>
-<?php echo $this->Form->input('school',array('label'=>false, 'placeholder'=>'Organization...','value'=>@$userdatass['User']['school'])); ?>
-<div style="display:<?php echo @$userdatass['User']['id']==''?'block':'none'; ?>">
+
+<?php echo $this->Form->input('school',array('value'=>@$userdatass['User']['school'])); ?>
+<div style="display:<?php echo @$userdatass['User']['id']==''?'block':'none'; ?>">                             
+
 <label>Organization Type<span class="star">*</span></label>
 <?php $sizes = array(''=>'Select','School' => 'School', 'Event' => 'Event', 'Corporation' => 'Corporation','Healthcare'=>'Health care');
 echo $this->Form->input(
@@ -32,6 +28,17 @@ echo $this->Form->input(
     array('options' => $sizes, 'default' => 'Select','label'=>false, 'value'=>@$userdatass['User']['userview'])
 );
 ?>
+
+<div id="showUserType"  style="display:none;">
+<label>User Type<span class="star">*</span></label>
+<?php $usertype = array('4' => 'Manager', '10' => 'Company');
+echo $this->Form->input(
+    'healthusertype',
+    array('options' => $usertype, 'default' => 'Manager','label'=>false )
+);
+?>
+</div>
+
 </div>
 <div class="usertype" style="display:none;">
 <label>User Type<span class="star">*</span></label>
@@ -50,10 +57,10 @@ echo $this->Form->input(
 <?php //} ?>
 </select>
 </div> -->
-<label>Security Question<span class="star">*</span></label>
-<?php echo $this->Form->input('question',array('label'=>false, 'placeholder'=>'Security Question','value'=>@$userdatass['User']['question'])); ?>
-<label>Answer<span class="star">*</span></label>
-<?php echo $this->Form->input('answer',array('label'=>false, 'placeholder'=>'Answer','value'=>@$userdatass['User']['answer'])); ?>
+
+<?php echo $this->Form->input('question',array('value'=>@$userdatass['User']['question'])); ?>
+
+<?php echo $this->Form->input('answer',array('value'=>@$userdatass['User']['answer'])); ?>
 <?php echo $this->Form->end(array('class'=>'Submit_button full_width','label'=>'Submit')); ?>
 
 </div>
@@ -67,22 +74,14 @@ echo $this->Form->input(
   </div>
 </section>
 <?php echo $this->element('footer');?>
-
       </div>
-
-
-
-
 
 <script> 
 $(document).ready(function(){
    var $aSelected = $('div.email').find('div');
-
 if( $aSelected.hasClass('error-message') ){ // .hasClass() returns BOOLEAN true/false
-
   $('#UserPassword').val('');
  
-
 }
 $('#UserUserview').on('change',function(){
    var userview = $(this).val();
@@ -96,7 +95,6 @@ $('#UserUserview').on('change',function(){
    }
 });
 $('.hideshow').on('click',function(){
-
 var txxt=$(this).text();
 if(txxt=='Show Password')
 {
@@ -109,7 +107,15 @@ $('#UserPassword').get(0).type = 'password';
 $(this).text('Show Password');
 }
 //$('#UserPassword').prop('type','text');
-
+});
+$('#UserUserview').change(function () {
+  var selectedVal = $(this).val();
+  console.log('Selected ', selectedVal);
+  if(selectedVal === 'Healthcare') {
+    $('#showUserType').show();
+  }else {
+    $('#showUserType').hide();
+  }
 });
 });
 </script>

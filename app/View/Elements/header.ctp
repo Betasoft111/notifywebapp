@@ -8,7 +8,7 @@ $parent=0;
 $manager=0;
 $employee=0;
 $eventHost=0;
-$eventee=0;
+$eventee=0;$company=0;
 if(!empty($roledata))
 {
 foreach ($roledata as $roledatas) {
@@ -52,8 +52,8 @@ $company=$roledatas['role'];
 ?>
 <header>
   <div class="top-cont">
-    <div class="top-left"><img src="<?php echo HTTP_ROOT;?>/images/notify-img.png" alt=""></div>
-    <div class="top-right"><img src="<?php echo HTTP_ROOT;?>/images/admin-img.png" alt=""> Notify Admin</div>
+    <div class="top-left"><a href="<?php echo HTTP_ROOT;?>"><img src="<?php echo HTTP_ROOT;?>images/notify-img.png" alt=""></a></div>
+  <div class="top-right"><a href="<?php echo HTTP_ROOT."users/profile"; ?>"><img style="width:25px;height:25px;border-radius:10px;" id="profilepic" src="<?php if($parentData['User']['profile_pic']!=''){echo HTTP_ROOT.'bss_files/'.$parentData['User']['profile_pic'];}else{ echo HTTP_ROOT.'img/images/Profile-pic.png'; }?>"> <?php echo $parentData['User']['first_name']!=''?@$parentData['User']['first_name']:'--------------';  ?> <?php echo $parentData['User']['last_name']!=''?@$parentData['User']['last_name']:'---------------';  ?></a></div>
     <?php
     $route =$this->here;
     //echo $route;
@@ -128,33 +128,37 @@ $company=$roledatas['role'];
         <?php } ?>
         <li><a class="<?php if($prm=='companylist' || $prm=='addcompany') { echo "active"; }else {echo "";}?>" href="Javascript:void(0);">Companies/Manager</a>
         <ul>
-          <?php if($company=='10') {?>
-          <li><a class="<?php if($prm=='managerlist' || $prm=='addmanager') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."company/mangerlist"; ?>">As Company</a>
-          </li>
-          <?php } if($manager=='4') {?>
-          <li><a class="<?php if($prm=='companylist' || $prm=='addcompany') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."managers/companylist"; ?>">As Manager</a></li>
-          <?php } if($employee=='5') {?>
-          <li><a class="<?php if($prm=='schoolList' || $prm=='schoolAdd') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."school/schoolList"; ?>">As Employee</a></li>
-          <?php }?>
-        </ul>
-      </li>
-      <li><a class="<?php if($prm=='eventList' || $prm=='addevent' || $prm=='eventeeView' || $prm=='AddEventee') { echo "active"; }else {echo "";}?>" href="Javascript:void(0);">Event</a>
-      <ul>
-        <?php if($eventHost=='6') {?>
-        <li><a class="<?php if($prm=='eventList' || $prm=='addevent' || $prm=='eventeeView' || $prm=='AddEventee') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."event/eventList"; ?>">As EventHost</a></li>
-        <?php } if($eventee=='7') {?>
-        <li><a class="<?php if($prm=='schoolList' || $prm=='schoolAdd') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."school/schoolList"; ?>">As Eventee</a></li>
+
+          <?php if($parentData['User']['userview']=='Healthcare'){ 
+          if(($company=='10')||($manager=='4')) {?>
+          <li><a class="<?php if($prm=='managerlist' || $prm=='addmanager') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."management/employlist"; ?>">As Employee</a>
+        </li> 
+        <li><a class="<?php if($prm=='managerlist' || $prm=='addmanager') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."management/Meetinglist"; ?>">Meeting schedule</a>
+        </li> 
+        <?php } } if(($manager=='4')&&($parentData['User']['userview']!='Healthcare')) {?>
+        <li><a class="<?php if($prm=='companylist' || $prm=='addcompany') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."managers/companylist"; ?>">As Manager</a></li>
+        <?php } if($employee=='5') {?>
+        <li><a class="<?php if($prm=='schoolList' || $prm=='schoolAdd') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."school/schoolList"; ?>">As Employee</a></li>
         <?php }?>
       </ul>
     </li>
-    <li><a class="<?php echo $prm=='signup'?'active':''; ?>" href="<?php echo HTTP_ROOT."users/signup"; ?>">Join</a></li>
-    <?php $uid=$this->Session->read('Auth.User.User.id'); if(empty($uid)){ ?>
-    <li><a class="<?php echo $prm=='login'?'active':''; ?>" href="<?php echo HTTP_ROOT."users/login"; ?>">Login</a></li>
-    <?php } else {?>
-    <li><a href="<?php echo HTTP_ROOT."users/logout"; ?>">Logout</a></li>
-    <?php }?>
-    <li><a class="<?php echo $prm=='beaconsList'?'active':''; ?>" href="<?php echo HTTP_ROOT."beacons/beaconsList"; ?>">Beacons</a></li>
-  </ul>
+    <li><a class="<?php if($prm=='eventList' || $prm=='addevent' || $prm=='eventeeView' || $prm=='AddEventee') { echo "active"; }else {echo "";}?>" href="Javascript:void(0);">Event</a>
+    <ul>
+      <?php if($eventHost=='6') {?>
+      <li><a class="<?php if($prm=='eventList' || $prm=='addevent' || $prm=='eventeeView' || $prm=='AddEventee') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."event/eventList"; ?>">As EventHost</a></li>
+      <?php } if($eventee=='7') {?>
+      <li><a class="<?php if($prm=='schoolList' || $prm=='schoolAdd') { echo "active"; }else {echo "";}?>" href="<?php echo HTTP_ROOT."school/schoolList"; ?>">As Eventee</a></li>
+      <?php }?>
+    </ul>
+  </li>
+  <li><a class="<?php echo $prm=='signup'?'active':''; ?>" href="<?php echo HTTP_ROOT."users/signup"; ?>">Join</a></li>
+  <?php $uid=$this->Session->read('Auth.User.User.id'); if(empty($uid)){ ?>
+  <li><a class="<?php echo $prm=='login'?'active':''; ?>" href="<?php echo HTTP_ROOT."users/login"; ?>">Login</a></li>
+  <?php } else {?>
+  <li><a href="<?php echo HTTP_ROOT."users/logout"; ?>">Logout</a></li>
+  <?php }?>
+  <li><a class="<?php echo $prm=='beaconsList'?'active':''; ?>" href="<?php echo HTTP_ROOT."beacons/beaconsList"; ?>">Beacons</a></li>
+</ul>
 </nav>
 </div>
 </nav>

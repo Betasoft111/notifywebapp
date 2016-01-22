@@ -16,7 +16,7 @@
  <?php //}?>
           <li><a href="<?php// echo HTTP_ROOT."beacons/beaconsList"; ?>">Beacons</a></li>-->
           <li class="last_link"><a href="<?php echo HTTP_ROOT."users/contactUs"; ?>">Contact Us</a></li>
-          <li>© 2015 by beacons.com</li>
+          <li>© 2015 by Notified</li>
         </ul>
       </div>
     </div>
